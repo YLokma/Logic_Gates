@@ -20,6 +20,24 @@ This was inspired by **Cambridge's IGCSE Computer Science** Digital Logic chapte
 **Python Version Requirement: 3.6+**
 
 ---
+### General Use Instructions & Examples
+If we want to solve this question:
+```
+X = ((NOT A) AND (B OR C))
+```
+* For Logic_Gates_str:
+
+
+![image](https://user-images.githubusercontent.com/94978677/164981150-b48a78ce-ab83-41a0-946d-d1c1f8a2f239.png)
+
+
+**Note: capitalization is not an issue as long as it makes sense**
+* For Logic_Gates_int:
+
+
+![image](https://user-images.githubusercontent.com/94978677/164981169-6153a660-f842-4a24-a23e-4fec5f154e5c.png)
+
+**Note: spaces are not an issue as long as you are consistent during each input (small statement)**
 
 ### Windows
 In order to run on windows you can use your favourite text editor or via the command-line via the command using CMD

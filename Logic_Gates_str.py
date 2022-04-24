@@ -13,11 +13,11 @@ while gate_count < 1:
 	gate_count = int(input('Invalid number of gates, try again \n'))
 for point in Table:
 	if counter < gate_count:
-		small_statement = str(input('Enter the small statement in the form (N GATE M) or (NOT N) \n'))
+		small_statement = str(input('Enter the small statement in the form (N GATE M) or (NOT N) without any brackets \n'))
 		small_statement = small_statement.split()
 		if len(small_statement) == 2:
 			while (small_statement[0] not in NOT and len(small_statement) < 3) or small_statement[1] not in all_points:
-				small_statement = str(input('Re-enter the small statement in the form (N GATE M) or (NOT N) \n'))
+				small_statement = str(input('Re-enter the small statement in the form (N GATE M) or (NOT N) without any brackets \n'))
 				small_statement = small_statement.split()
 		if len(small_statement) != 2:
 			while len(small_statement) == 1 or len(small_statement) > 3 or small_statement[1] not in all_points or small_statement[0] not in all_points or small_statement[2] not in all_points:
@@ -29,7 +29,7 @@ for point in Table:
 			small_statement.pop(0)
 		if len(small_statement) == 3:
 			while small_statement[0]-1 not in range(0,len(Table)) or small_statement[2]-1 not in range(0,len(Table)):
-				small_statement = input('Re-enter the small statement \n')
+				small_statement = input('Re-enter the small statement without any brackets \n')
 				small_statement = small_statement.split()
 				for i in [0,0,0]:
 					if type(small_statement[i]) == int: break

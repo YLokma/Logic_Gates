@@ -20,7 +20,7 @@ for point in Table:
 				small_statement = str(input('Re-enter the small statement in the form (N GATE M) or (NOT N) \n'))
 				small_statement = small_statement.split()
 		if len(small_statement) != 2:
-			while len(small_statement) == 1 or small_statement[1] not in all_points or small_statement[0] not in all_points or small_statement[2] not in all_points:
+			while len(small_statement) == 1 or len(small_statement) > 3 or small_statement[1] not in all_points or small_statement[0] not in all_points or small_statement[2] not in all_points:
 				small_statement = str(input('Re-enter the small statement in the form (N GATE M) or (NOT N), spaces are important! \n'))
 				small_statement = small_statement.split()		
 		for i in [0,0,0]:

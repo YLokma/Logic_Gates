@@ -9,7 +9,7 @@ while gate_count < 1 or gate_count > 9:
 for point in Table:
 	if counter < gate_count:
 		turn = str(counter + inputs_no + 1) + '='
-		print('Enter the small statement in the form (N GATE M) or (NOT N)')
+		print('Enter the small statement in the form 123 where 2 is the gate')
 		print('Choose the gates from')
 		print('0:NOT \t 1:AND \t 2:OR \t 3:NAND \t 4:NOR \t 5:XOR')
 		if counter == gate_count - 1:
@@ -30,7 +30,7 @@ for point in Table:
 				small_statement[i] = int(small_statement[i])
 		if len(small_statement) == 2:
 			while small_statement[0] != 0:
-				print('Re-enter the small statement in the form (N GATE M) or (NOT N)')
+				print('Re-enter the small statement in the form 123 where 2 is the gate')
 				print('Choose the gates from')
 				print('0:NOT \t 1:AND \t 2:OR \t 3:NAND \t 4:NOR \t 5:XOR')
 				if counter == gate_count - 1:
@@ -42,7 +42,7 @@ for point in Table:
 					small_statement.append(int(small_statement[0][i]))
 				small_statement.pop(0)
 			while small_statement[1]-1 not in range(0,len(Table)):
-				print('Re-enter the small statement in the form (N GATE M) or (NOT N)')
+				print('Re-enter the small statement in the form 123 where 2 is the gate')
 				print('Choose the gates from')
 				print('0:NOT \t 1:AND \t 2:OR \t 3:NAND \t 4:NOR \t 5:XOR')
 				if counter == gate_count - 1:
@@ -55,7 +55,7 @@ for point in Table:
 				small_statement.pop(0)
 		else:
 			while small_statement[1] > 5 or small_statement[1] < 0:
-				print('Re-enter the small statement in the form (N GATE M) or (NOT N)')
+				print('Re-enter the small statement in the form 123 where 2 is the gate')
 				print('Choose the gates from')
 				print('0:NOT \t 1:AND \t 2:OR \t 3:NAND \t 4:NOR \t 5:XOR')
 				if counter == gate_count - 1:
@@ -67,7 +67,7 @@ for point in Table:
 					small_statement.append(int(small_statement[0][i]))
 				small_statement.pop(0)
 			while small_statement[0]-1 not in range(0,len(Table)) or small_statement[2]-1 not in range(0,len(Table)):
-				print('Re-enter the small statement in the form (N GATE M) or (NOT N)')
+				print('Re-enter the small statement in the form 123 where 2 is the gate')
 				print('Choose the gates from')
 				print('0:NOT \t 1:AND \t 2:OR \t 3:NAND \t 4:NOR \t 5:XOR')
 				if counter == gate_count - 1:

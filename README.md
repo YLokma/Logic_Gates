@@ -27,12 +27,12 @@ X = ((NOT A) AND (B OR C))
 ```
 * Using Logic_Gates_str:
 
-![image](https://user-images.githubusercontent.com/94978677/165075984-6622eb16-e2a8-400f-8233-05038294ac7c.png)
+![image](https://user-images.githubusercontent.com/94978677/165080197-d46b68fe-940e-4d6b-b4fe-febea23ec82b.png)
 
 **Note: capitalization is not an issue as long as it makes sense**
 * Using Logic_Gates_int:
 
-![image](https://user-images.githubusercontent.com/94978677/165079398-75ed2d4a-2b63-450f-b4c8-e231cc7b61aa.png)
+![image](https://user-images.githubusercontent.com/94978677/165080636-fc92f7cc-d239-4e22-bad6-814fcfd6afeb.png)
 
 **Note: spaces are not an issue as long as you are consistent during each input (small statement)**
 

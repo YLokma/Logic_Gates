@@ -1,4 +1,6 @@
 Table_S = [] ; Table = [[]] ; counter = 0
+print("Welcome to our logic gates project, if you haven't already, please check out our GitHub for instructions")
+print('https://github.com/YLokma/Logic_Gates \n')
 inputs_no = str
 while type(inputs_no) != int:
 	try: inputs_no = int(input('Enter the number of inputs \n'))

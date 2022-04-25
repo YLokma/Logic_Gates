@@ -25,17 +25,14 @@ If we want to solve this question:
 ```
 X = ((NOT A) AND (B OR C))
 ```
-* For Logic_Gates_str:
+* Using Logic_Gates_str:
 
-
-![image](https://user-images.githubusercontent.com/94978677/164981150-b48a78ce-ab83-41a0-946d-d1c1f8a2f239.png)
-
+![image](https://user-images.githubusercontent.com/94978677/165075984-6622eb16-e2a8-400f-8233-05038294ac7c.png)
 
 **Note: capitalization is not an issue as long as it makes sense**
-* For Logic_Gates_int:
+* Using Logic_Gates_int:
 
-
-![image](https://user-images.githubusercontent.com/94978677/164981169-6153a660-f842-4a24-a23e-4fec5f154e5c.png)
+![image](https://user-images.githubusercontent.com/94978677/165079398-75ed2d4a-2b63-450f-b4c8-e231cc7b61aa.png)
 
 **Note: spaces are not an issue as long as you are consistent during each input (small statement)**
 

@@ -1,72 +1,36 @@
-def and_gate(input_1, input_2):
-    """This is a function to represent the AND gate.
+def not_gate(wire1:list,wire2=[]):
+    wire_out = []
+    for i in range(len(wire1)):
+        if wire1[i] == 1: wire_out.append(0)
+        else: wire_out.append(1)
+    return wire_out
 
-    Args:
-        input_1 ([int]): [this is an input to determine the output of AND gate]
-        input_2 ([int]): [this is an input to determine the output of AND gate]
-    """ """"""
-    if input_1 * input_2 == 1:
-        return 1
-    elif input_1 * input_2 == 0:
-        return 0
+def and_gate(wire1:list,wire2:list):
+    wire_out = []
+    for i in range(0,len(wire1)):
+        wire_out.append(wire1[i]*wire2[i])
+    return wire_out
 
-def not_gate(input_1):
-    """This is a function to represent the NOT gate
+def or_gate(wire1:list,wire2:list):
+    wire_out = []
+    for i in range(len(wire1)):
+        wire_out.append(wire1[i]+wire2[i])
+        if wire_out[i] > 0: wire_out[i] = 1
+        else: wire_out[i] = 0
+    return wire_out
 
-    Args:
-        input_1 ([Int]): [this is an input to determine the output of NOT gate]
-    """
-    if input_1 == 0:
-        return 1
-    elif input_1 == 1:
-        return 0
+def nand_gate(wire1:list,wire2:list):
+    return not_gate(and_gate(wire1, wire2))
 
-def or_gate(input_1, input_2):
-    """This is a function to represent the AND gate.
+def nor_gate(wire1:list,wire2:list):
+    return not_gate(or_gate(wire1, wire2))
 
-    Args:
-        input_1 ([int]): [this is an input to determine the output of OR gate]
-        input_2 ([int]): [this is an input to determine the output of OR gate]
-    """ """"""
-    if input_1 + input_2 >= 1:
-        return 1
-    elif input_1 + input_2 == 0:
-        return 0
-
-def nand_gate(input_1, input_2):
-    """This is a function to represent the AND gate.
-
-    Args:
-     input_1 ([int]): [this is an input to determine the output of NAND gate]
-     input_2 ([int]): [this is an input to determine the output of NAND gate]
-    """
-    if input_1 * input_2 == 1:
-        return 0
-    elif input_1 * input_2 == 0:
-        return 1
-
-def nor_gate(input_1, input_2):
-    """This is a function to represent the AND gate.
-
-    Args:
-     input_1 ([int]): [this is an input to determine the output of NOR gate]
-     input_2 ([int]): [this is an input to determine the output of NOR gate]
-    """
-    if input_1 + input_2 >= 1:
-        return 0
-    elif input_1 + input_2 == 0:
-        return 1
-
-def xor_gate(input_1, input_2):
-    """This is a function to represent the AND gate.
-
-    Args:
-        input_1 ([int]): [this is an input to determine the output of OR gate]
-        input_2 ([int]): [this is an input to determine the output of OR gate]
-    """ """"""
-    if input_1 + input_2 == 1:
-        return 1
-    else:
-        return 0
+def xor_gate(wire1:list,wire2:list):
+    wire_out = []
+    for i in range(len(wire1)):
+        wire_out.append(wire1[i]+wire2[i])
+        if wire_out[i] == 1: wire_out[i] = 1
+        else: wire_out[i] = 0
+    return wire_out
 
 Gates = [not_gate,and_gate,or_gate,nand_gate,nor_gate,xor_gate]

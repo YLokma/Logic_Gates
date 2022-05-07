@@ -2,6 +2,8 @@ gates_dict = {'NOT':0,'AND':1,'OR':2,'NAND':3,'NOR':4,'XOR':5} ; points_dict = {
 points_and_gates = {'A':1,'B':2,'C':3,'P':4,'Q':5,'R':6,'S':7,'T':8,'U':9,'V':10,'W':11,'NOT':0,'AND':1,'OR':2,'NAND':3,'NOR':4,'XOR':5}
 
 def validate_and_convert(file:type, small_statement, counter:int,inputs_no:int = 3)  -> list:
+	while counter + inputs_no > 9 and ' ' not in small_statement and len(small_statement) > 3:
+		small_statement = input('You have to insert spaces now \n')
 	if ' ' in small_statement:
 		small_statement = small_statement.split(' ')
 	else:

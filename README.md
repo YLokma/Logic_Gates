@@ -27,7 +27,7 @@ This was inspired by **Cambridge's IGCSE Computer Science** Digital Logic chapte
     * Type of input used for gates: text
 
 # How To Use
-**Python Version Requirement: 3.6+**
+**Download & install python from https://www.python.org/downloads/**
 
 ---
 ## General Use Instructions
@@ -48,20 +48,20 @@ Here are the input methods, choose the one you prefer
 ### 1. Input using numbers only:
 ![image](https://user-images.githubusercontent.com/94978677/168430106-53faf932-b598-4e5c-a8f1-d30bc5cf25cb.png)
 
-**Note: spaces are not an issue as long as you are consistent during each input (small statement)**
+**Note: spaces are not an issue as long as you are consistent during each input**
 
 ### 2. Input using numbers and text
 
 ![image](https://user-images.githubusercontent.com/94978677/168430388-907c6064-1ebf-45a5-821b-07f1b1ccd9f0.png)
 
 
-**Note: spaces are required**
+**Note: capitalization is not an issue, but spaces are required**
 
 ### 3. Input using text only:
 
 ![image](https://user-images.githubusercontent.com/94978677/168430308-845d1dc0-a9ae-4545-8111-49f72f2a4ebb.png)
 
-**Note: capitalization is not an issue**
+**Note: capitalization is not an issue, but spaces are required**
 
 
 

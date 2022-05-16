@@ -1,35 +1,31 @@
 # Statement Validation
 gates_dict = {'NOT':0,'AND':1,'OR':2,'NAND':3,'NOR':4,'XOR':5} ; points_dict = {'A':1,'B':2,'C':3,'P':4,'Q':5,'R':6,'S':7,'T':8,'U':9,'V':10,'W':11}
-points_and_gates = {'A':1,'B':2,'C':3,'P':4,'Q':5,'R':6,'S':7,'T':8,'U':9,'V':10,'W':11,'NOT':0,'AND':1,'OR':2,'NAND':3,'NOR':4,'XOR':5} 
+int_gates_dict = {'0':0,'1':1,'2':2,'3':3,'4':4,'5':5}; int_points_dict = {} ; all_gates = [0,int_gates_dict,gates_dict,gates_dict]
 
-def statement_validation(file:str,small_statement ,counter:int,inputs_no:int = 3)  -> list:
+def statement_validation(input_type:int,small_statement ,counter:int,inputs_no:int = 3)  -> list:
+	for i in range(len(int_points_dict)+1,inputs_no+counter+1):
+		int_points_dict[str(i)] = i
+	all_points = [0,int_points_dict,int_points_dict,points_dict]
 	while counter + inputs_no > 9 and ' ' not in small_statement and len(small_statement) > 3:
-		small_statement = input('You have to insert spaces \n')
+		small_statement = input('You have to insert spaces \n').upper()
 	if ' ' in small_statement:
 		small_statement = small_statement.split()
 	else:
 		small_statement = list(small_statement)
 	if len(small_statement) == 2:
 		small_statement.insert(0,small_statement[1])
-	if file == 'str':	
-		while len(small_statement) != 3 or small_statement[1] not in gates_dict or small_statement[0] not in points_dict or small_statement[2] not in points_dict:
-				small_statement = input('Re-enter the small statement in the form (N GATE M) or (NOT N) \n').upper().split()
-				if len(small_statement) == 2:
-					small_statement.insert(0,small_statement[1])
-		for i in range(len(small_statement)):
-			small_statement[i] = points_and_gates[small_statement[i]]
-	elif file == 'mix':
-		while len(small_statement) == 1 or small_statement[1] not in gates_dict:
-			small_statement = input('Re-enter the small statement in the form (N GATE M) or (NOT N) \n').upper().split()
-			if len(small_statement) == 2:
-				small_statement.insert(0,small_statement[1])
-		small_statement[1] = gates_dict[small_statement[1]]
-		for i in range(len(small_statement)):
-			small_statement[i] = int(small_statement[i])
-	elif file == 'int':
-		for i in range(len(small_statement)):
-			small_statement[i] = int(small_statement[i])
-	while len(small_statement) != 3 or small_statement[0]-1 not in range(inputs_no + counter) or small_statement[2]-1 not in range(inputs_no + counter) or small_statement[1] not in range(0,5+1) or (small_statement[0] == small_statement[2] and small_statement[1] != 0):
+	while len(small_statement) != 3 or small_statement[1] not in all_gates[input_type] or small_statement[0] not in all_points[input_type] or small_statement[2] not in all_points[input_type]:
+		small_statement = input('Re-enter the small statement correctly \n').upper()
+		if ' ' in small_statement:
+			small_statement = small_statement.split()
+		else:
+			small_statement = list(small_statement)
+		if len(small_statement) == 2:
+			small_statement.insert(0,small_statement[1])
+	small_statement[0] = all_points[input_type][small_statement[0]]
+	small_statement[1] = all_gates[input_type][small_statement[1]]
+	small_statement[2] = all_points[input_type][small_statement[2]]
+	while len(small_statement) != 3 or small_statement[0]-1 not in range(inputs_no + counter) or small_statement[2]-1 not in range(inputs_no + counter) or (small_statement[0] == small_statement[2] and small_statement[1] != 0):
 		small_statement = input('Invalid statement, please re-enter the small statement correctly \n').upper()
 		if ' ' in small_statement:
 			small_statement = small_statement.split()
@@ -37,18 +33,9 @@ def statement_validation(file:str,small_statement ,counter:int,inputs_no:int = 3
 			small_statement = list(small_statement)
 		if len(small_statement) == 2:
 				small_statement.insert(0,small_statement[1])
-		if file == 'str':
-			for i in range(len(small_statement)):
-				small_statement[i] = points_and_gates[small_statement[i]]
-		elif file == 'mix':
-			while small_statement[1] not in gates_dict:
-				small_statement = input('Re-enter the small statement in the form (N GATE M) or (NOT N) \n').upper().split()
-			small_statement[1] = gates_dict[small_statement[1]]
-			for i in range(len(small_statement)):
-				small_statement[i] = int(small_statement[i])
-		elif file == 'int':
-			for i in range(len(small_statement)):
-				small_statement[i] = int(small_statement[i])
+		small_statement[0] = all_points[input_type][small_statement[0]]
+		small_statement[1] = all_gates[input_type][small_statement[1]]
+		small_statement[2] = all_points[input_type][small_statement[2]]
 	return small_statement
 
 # Numerical Input Validation
@@ -64,7 +51,7 @@ def numerically_validate(variable_name:str ,maximum:int = INFINITY , minimum:int
         while type(variable) != int:
             try: variable = int(variable)
             except ValueError: variable = input(f'Invalid {variable_name} \n')
-    return variable 
+    return variable
 
 # Gates
 

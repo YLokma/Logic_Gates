@@ -12,8 +12,8 @@ while counter < gate_count:
 	print('Enter the small statement in the form (N GATE M) or (NOT N), where N & M are numbers')
 	if counter == gate_count - 1:
 		small_statement = input('X = ').upper()
-	else:	
+	else:
 		small_statement = input(str(inputs_no + counter + 1) + ' = ').upper()
-	small_statement = statement_validation('mix',small_statement,counter,inputs_no)
+	small_statement = statement_validation(2,small_statement,counter,inputs_no)
 	Table.append(Gates[small_statement[1]](Table[small_statement[0]-1],Table[small_statement[2]-1]))
 	counter += 1

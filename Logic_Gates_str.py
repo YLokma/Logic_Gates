@@ -14,6 +14,6 @@ while counter < gate_count:
 		small_statement = input('X = ').upper()
 	else:
 		small_statement = input(POINTS[counter + 3] + ' ').upper()
-	small_statement = statement_validation('str',small_statement,counter)
+	small_statement = statement_validation(3,small_statement,counter)
 	Table.append(Gates[small_statement[1]](Table[small_statement[0]-1],Table[small_statement[2]-1]))
 	counter += 1

@@ -1,4 +1,4 @@
-from Functions import *
+from Functions import table_gen,numerically_validate,statement_validation,Gates
 
 Table = table_gen()
 counter = 0

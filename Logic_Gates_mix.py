@@ -1,4 +1,4 @@
-from Functions import *
+from Functions import table_gen,numerically_validate,statement_validation,Gates
 
 inputs_no = numerically_validate('number of inputs')
 gate_count = numerically_validate('number of gates')

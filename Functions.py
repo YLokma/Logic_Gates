@@ -41,7 +41,7 @@ def statement_validation(input_type:int,small_statement ,counter:int,inputs_no:i
 # Numerical Input Validation
 from json.encoder import INFINITY
 
-def numerically_validate(variable_name:str ,maximum:int = INFINITY , minimum:int = 1) -> int:
+def numerically_validate(variable_name:str , minimum:int = 1 , maximum:int = INFINITY) -> int:
     variable = input(f'Enter the {variable_name} \n')
     while type(variable) != int:
         try: variable = int(variable)

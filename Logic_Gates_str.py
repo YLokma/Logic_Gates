@@ -2,7 +2,7 @@ from Functions import table_gen,numerically_validate,statement_validation,Gates
 
 Table = table_gen()
 counter = 0
-gate_count = numerically_validate('number of gates',9)
+gate_count = numerically_validate('number of gates',1,9)
 POINTS = ['A =','B =','C =','P =','Q =','R =','S =','T =','U =','V =','W =','X =']
 while counter < gate_count:
 	print(' ')

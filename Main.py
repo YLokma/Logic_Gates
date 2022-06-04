@@ -7,7 +7,7 @@ print('1: type using numbers only (112)')
 print('2: type gates as text and the points as numbers (1 and 2)')
 print('3: type using text and spaces only (a and b)')
 
-input_type = numerically_validate('input type',3,1)
+input_type = numerically_validate('input type',1,3)
 
 match input_type:
     case 1: from Logic_Gates_int import *
